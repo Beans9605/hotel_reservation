@@ -1,3 +1,6 @@
+* {
+    margin: 0px;
+}
 html,body {
 
 }
@@ -7,7 +10,7 @@ html,body {
     height: 100%;
     display: grid;
     grid-template-columns: 30fr 537fr 400fr 500fr 30fr;
-    grid-template-rows: 56px 200px 500px 435px 400px;
+    grid-template-rows: 56px 100px 470px 435px 400px;
 }
 .home_nav_bar {
     grid-column: 1 / -1 ;
@@ -17,14 +20,42 @@ html,body {
     border: 1px solid red;
     grid-column: 2 / 3 ;
     grid-row: 2 / 4;
+    position: relative;
+    overflow: visible;
+}
+.top_comment {
+    border: 1px solid blue;
+    position: absolute;
+    left: 60px;
+    top: 154px;
+
+}
+.main_comment {
+    border: 1px solid blue;
+    position: absolute;
+    max-height: 100px;
+    left: 60px;
+    top: 200px;
+    font-size: 583%;
+    z-index: 2;
+    white-space: nowrap;
+}
+.textBox {
+    border: 1px solid blue;
+    position: absolute;
+    left: 60px;
+    top: 303px;
+    z-index: 2;
+    font-size: 130%;
 }
 .img_box {
     border: 1px solid red;
     grid-column: 3 / 5 ;
     grid-row: 2 / 4;
-    overflow: hidden;
-   
+    overflow: visible;   
 }
+
+
 .date_checkBox {
     border: 1px solid green;
     grid-column: 4  ;
@@ -33,15 +64,15 @@ html,body {
     z-index: 1;
     display: grid;
     grid-template-columns: 20fr 230fr 230fr 20fr;
-    grid-template-rows: 50px 100px 100px 100px 100px 50px;
+    grid-template-rows: 50px 80px 80px 80px 50px 50px;
     align-items: center;
     justify-items: center;
 }
 .date_box {
     max-width: 152px;
     min-width: 152px;
-    max-height: 95px;
-    min-height: 95px;
+    max-height: 80px;
+    min-height: 80px;
     border: 1px solid black;
     text-align: left;
     
@@ -88,5 +119,37 @@ html,body {
     border: 1px solid red;
     grid-column: 1 / -1 ;
     grid-row: 5;
+    background-color: black;
+    color: white;
+    position: relative;
     
+}
+.footer_logo {
+    position: absolute;
+    border: 1px solid white;
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contact_box {
+    display: flex;
+    flex-grow: 1;
+    position: absolute;
+    border: 1px solid white;
+    width: 800px;
+    height: 80px;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sns_box {
+    position: absolute;
+    border: 1px solid white;
+    width: 400px;
+    height: 50px;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
