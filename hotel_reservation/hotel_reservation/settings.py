@@ -121,5 +121,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # static file 저장 경로 절대 지정
 STATICFILES_DIR = (
-    os.path.join(BASE_DIR, "static")
+    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "statics")
 )

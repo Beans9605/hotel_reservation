@@ -1,0 +1,27 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 10fr 495fr 10fr;
+    grid-template-rows: 56fr 200fr 500fr 154fr 400fr;
+}
+.home_nav_bar {
+    grid-column: 1 / -1 ;
+    grid-row: 1;
+}
+.main_contentBox {
+    border: 1px solid red;
+    grid-column: 1 / -1 ;
+    grid-row: 2 / 4;
+}
+.imformation {
+    border: 1px solid red;
+    grid-column: 1 / -1 ;
+    grid-row: 4;
+}
+.footer {
+    border: 1px solid red;
+    grid-column: 1 / -1 ;
+    grid-row: 5;
+}
