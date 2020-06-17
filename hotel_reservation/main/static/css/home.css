@@ -1,27 +1,92 @@
+html,body {
+
+}
 .wrapper {
     position: relative;
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 10fr 495fr 10fr;
-    grid-template-rows: 56fr 200fr 500fr 154fr 400fr;
+    grid-template-columns: 30fr 537fr 400fr 500fr 30fr;
+    grid-template-rows: 56px 200px 500px 435px 400px;
 }
 .home_nav_bar {
     grid-column: 1 / -1 ;
     grid-row: 1;
 }
-.main_contentBox {
+.slide_textBox {
     border: 1px solid red;
-    grid-column: 1 / -1 ;
+    grid-column: 2 / 3 ;
     grid-row: 2 / 4;
 }
+.img_box {
+    border: 1px solid red;
+    grid-column: 3 / 5 ;
+    grid-row: 2 / 4;
+    overflow: hidden;
+   
+}
+.date_checkBox {
+    border: 1px solid green;
+    grid-column: 4  ;
+    grid-row: 3 / 4;
+    background-color: white;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 20fr 230fr 230fr 20fr;
+    grid-template-rows: 50px 100px 100px 100px 100px 50px;
+    align-items: center;
+    justify-items: center;
+}
+.date_box {
+    max-width: 152px;
+    min-width: 152px;
+    max-height: 95px;
+    min-height: 95px;
+    border: 1px solid black;
+    text-align: left;
+    
+}
+#checkin {
+    grid-column: 2 ;
+    grid-row: 2 ;
+}
+#checkout {
+    grid-column: 3;
+    grid-row: 2;
+}
+#room {
+    grid-column: 2;
+    grid-row: 3; 
+}
+#location {
+    grid-column: 3;
+    grid-row: 3; 
+}
+#adult {
+    grid-column: 2;
+    grid-row: 4; 
+}
+#children {
+    grid-column: 3;
+    grid-row: 4;
+}
+#bookNow {
+    max-width: 152px;
+    min-width: 152px;
+    max-height: 50px;
+    min-height: 50px;
+    grid-column: 2;
+    grid-row: 5; 
+}
+
 .imformation {
     border: 1px solid red;
-    grid-column: 1 / -1 ;
+    grid-column: 2 / 5 ;
     grid-row: 4;
 }
 .footer {
     border: 1px solid red;
     grid-column: 1 / -1 ;
     grid-row: 5;
+    
 }
