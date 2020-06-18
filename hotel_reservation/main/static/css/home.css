@@ -15,21 +15,21 @@
     grid-row: 1;
 }
 .slide_textBox {
-    border: 1px solid red;
+    
     grid-column: 2 / 3 ;
     grid-row: 2 / 4;
     position: relative;
     overflow: visible;
 }
 .top_comment {
-    border: 1px solid blue;
+    
     position: absolute;
     left: 60px;
     top: 154px;
 
 }
 .main_comment {
-    border: 1px solid blue;
+    
     position: absolute;
     max-height: 100px;
     left: 60px;
@@ -39,14 +39,14 @@
     white-space: nowrap;
 }
 .textBox {
-    border: 1px solid blue;
+    
     position: absolute;
     left: 60px;
     top: 369px;
     font-size: 80%;
 }
 .img_box {
-    border: 1px solid red;
+    
     grid-column: 3 / 5 ;
     grid-row: 2 / 4;
     position: relative;
@@ -62,61 +62,93 @@
 }
 
 .date_checkBox {
-    border: 1px solid green;
+    min-width: 470px;
     grid-column: 4  ;
     grid-row: 3 / 4;
     background-color: white;
     z-index: 1;
+    position: relative;
+    
+    /* grid
     display: grid;
     grid-template-columns: 20fr 230fr 230fr 20fr;
     grid-template-rows: 50px 80px 80px 80px 50px 50px;
     align-items: center;
     justify-items: center;
+    */
 }
 .date_box {
+    position: absolute;
     max-width: 152px;
     min-width: 152px;
     max-height: 80px;
     min-height: 80px;
-    border: 1px solid black;
     text-align: left;
-    
+ 
 }
+.date_box p {
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+.date_box input {
+    border: none;
+    border-bottom: 3px solid black;
+    width: 158px;
+    margin: 0px;
+}
+    
+
 #checkin {
     grid-column: 2 ;
     grid-row: 2 ;
+    top: 20%;
+    left: 10%;
 }
+
 #checkout {
     grid-column: 3;
     grid-row: 2;
+    top: 20%;
+    right: 46px;
 }
+
 #room {
     grid-column: 2;
     grid-row: 3; 
+    top: 40%;
+    left: 10%;
+    
 }
 #location {
     grid-column: 3;
     grid-row: 3; 
+    top: 40%;
+    right: 46px;;
 }
 #adult {
     grid-column: 2;
     grid-row: 4; 
+    top: 60%;
+    left: 10%;
 }
 #children {
     grid-column: 3;
     grid-row: 4;
+    top: 60%;
+    right: 46px;
 }
 #bookNow {
-    max-width: 152px;
-    min-width: 152px;
-    max-height: 50px;
-    min-height: 50px;
-    grid-column: 2;
-    grid-row: 5; 
+   width: 152px;
+   height: 50px;
+   top: 85%;
+   left: 10%;
 }
-
+.btn-sm {
+    margin-left: 1px;
+    
+}
 .imformation {
-    border: 1px solid red;
+   
     grid-column: 2 / 5 ;
     grid-row: 4;
 }
@@ -144,7 +176,7 @@
 }
 
 .footer {
-    border: 1px solid red;
+    
     grid-column: 1 / -1 ;
     grid-row: 5;
     background-color: black;
@@ -155,7 +187,7 @@
 
 .footer_logo {
     position: absolute;
-    border: 1px solid white;
+    
     width: 100px;
     height: 100px;
     top: 30%;
@@ -169,7 +201,7 @@
     display: flex;
     flex-grow: 1;
     position: relative;
-    border: 1px solid white;
+    
     width: 800px;
     height: 80px;
     top: 59%;
@@ -186,7 +218,7 @@
 
 .sns_box {
     position: relative;
-    border: 1px solid white;
+    
     width: 400px;
     height: 50px;
     top: 70%;
@@ -194,9 +226,25 @@
     transform: translate(-50%, -50%);  
 }
 
-.sns_box2 {
+
+.facebook {
+    color: white;
     position: absolute;
     top: 50%;
-    left: 60%;
+    left: 38%;
+    transform: translate(-50%,-50%);
+}
+.twitter {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.instagram {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 62%;
     transform: translate(-50%,-50%);
 }
