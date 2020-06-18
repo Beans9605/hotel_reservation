@@ -1,9 +1,7 @@
 * {
     margin: 0px;
 }
-html,body {
 
-}
 .wrapper {
     position: relative;
     width: 100%;
@@ -122,6 +120,29 @@ html,body {
     grid-column: 2 / 5 ;
     grid-row: 4;
 }
+
+.infomenu {
+    background: rgb(252, 231, 226);
+}
+
+.infomenu ul {
+    margin: 0 auto;
+    padding: 10;
+    width: 900px;
+    text-align: center;
+}
+
+.infomenu ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 50px;
+    margin: 10px 50px;
+}
+
+.infomenu ul li:hover {
+    color: salmon;
+}
+
 .footer {
     border: 1px solid red;
     grid-column: 1 / -1 ;
@@ -131,6 +152,7 @@ html,body {
     position: relative;
     
 }
+
 .footer_logo {
     position: absolute;
     border: 1px solid white;
@@ -139,24 +161,42 @@ html,body {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
 }
+
 .contact_box {
     display: flex;
     flex-grow: 1;
-    position: absolute;
+    position: relative;
     border: 1px solid white;
     width: 800px;
     height: 80px;
     top: 59%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);   
 }
-.sns_box {
+
+.contact_box2 {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.sns_box {
+    position: relative;
     border: 1px solid white;
     width: 400px;
     height: 50px;
-    top: 85%;
+    top: 70%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);  
+}
+
+.sns_box2 {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%,-50%);
 }
