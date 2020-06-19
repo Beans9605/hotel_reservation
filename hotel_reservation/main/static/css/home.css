@@ -22,6 +22,7 @@
 .navbar-light .navbar-nav .nav-link:hover{
     color: salmon;
 }
+
 .slide_textBox {
     
     grid-column: 2 / 3 ;
@@ -31,13 +32,14 @@
 }
 
 .top_comment {
-    
+    font-size: 300%;
     position: absolute;
     left: 60px;
-    top: 154px;
+    top: 120px;
 
 }
 .main_comment {
+    display: none;
     position: absolute;
     max-height: 100px;
     left: 60px;
@@ -54,13 +56,11 @@
     font-size: 80%;
 }
 .img_box {
-    
     grid-column: 3 / 5 ;
     grid-row: 2 / 4;
-    position: relative;
-
-    
+    position: relative; 
 }
+
 .img_box img {
     position: absolute;
     top: 0;
@@ -69,6 +69,11 @@
     height: 100%;
 }
 
+.carousel-item{
+    height: 100%;
+}
+
+
 .date_checkBox {
     min-width: 470px;
     grid-column: 4  ;
@@ -76,15 +81,8 @@
     background-color: white;
     z-index: 1;
     position: relative;
-    
-    /* grid
-    display: grid;
-    grid-template-columns: 20fr 230fr 230fr 20fr;
-    grid-template-rows: 50px 80px 80px 80px 50px 50px;
-    align-items: center;
-    justify-items: center;
-    */
 }
+
 .date_box {
     position: absolute;
     max-width: 152px;
@@ -104,7 +102,7 @@
     width: 158px;
     margin: 0px;
 }
-    
+
 #checkin {
     grid-column: 2 ;
     grid-row: 2 ;
@@ -296,8 +294,7 @@
     }
     .img_box img{
         height: 100%;
-        width: min-content;
-        transform: translateX(-200px);
+        /* transform: translateX(-200px); */
     }
     .slide_textBox{
         color: #000000;
@@ -319,7 +316,7 @@
         margin-top: 50px;
         min-width: 100%;
         width: 100%;
-        height: 100%;
+        height: 500px;
     }
     .date_box{
         min-width: 150px;
@@ -348,5 +345,4 @@
     .footer{
         height: 350px;
     }
-
 }
