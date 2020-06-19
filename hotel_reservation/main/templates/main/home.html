@@ -21,7 +21,7 @@
     <body>
         <div class="wrapper">
             <div class="home_nav_bar">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="navbar-brand" href="#">Hotel</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -49,22 +49,23 @@
                 
             </div>
             <div class="img_box">
-                    <img src="{% static 'img/hotel4.jpg' %}"  alt="">
-
-                <!-- 이미지 슬라이드 호환성 문제
-                <div id="carouselExampleSlidesOnly" class="carousel_slide" data-ride="carousel">
+                <!-- <img src="{% static 'img/hotel4.jpg' %}"  alt=""> -->
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                          <img src="{% static 'img/hotel1.jpg' %}" class="d-block w-100" alt="...">
+                          <img src="{% static 'img/hotel1.jpg' %}"  alt="">
                       </div>
                       <div class="carousel-item">
-                        <img src="{% static 'img/hotel2.jpg' %}" class="d-block w-100" alt="...">
+                        <img src="{% static 'img/hotel2.jpg' %}"  alt="">
                       </div>
                       <div class="carousel-item">
-                        <img src="{% static 'img/hotel3.jpg' %}" class="d-block w-100" alt="...">
+                        <img src="{% static 'img/hotel3.jpg' %}"  alt="">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="{% static 'img/hotel4.jpg' %}"  alt="">
                       </div>
                     </div>
-                  </div>-->
+                  </div>
             </div>
             <div class="date_checkBox">
                 <span id="checkin" class = "date_box">
