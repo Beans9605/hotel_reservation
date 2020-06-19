@@ -29,12 +29,11 @@
 
 }
 .main_comment {
-    
     position: absolute;
     max-height: 100px;
     left: 60px;
     top: 200px;
-    font-size: 760%;
+    font-size: 500%;
     z-index: 1;
     white-space: nowrap;
 }
@@ -97,7 +96,6 @@
     margin: 0px;
 }
     
-
 #checkin {
     grid-column: 2 ;
     grid-row: 2 ;
@@ -176,18 +174,15 @@
 }
 
 .footer {
-    
     grid-column: 1 / -1 ;
     grid-row: 5;
     background-color: black;
     color: white;
     position: relative;
-    
 }
 
 .footer_logo {
     position: absolute;
-    
     width: 100px;
     height: 100px;
     top: 30%;
@@ -247,4 +242,102 @@
     top: 50%;
     left: 62%;
     transform: translate(-50%,-50%);
+}
+
+
+@media screen and (max-width: 1024px){
+    .infomenu ul{
+        width: 100%;
+    }
+    .slide_textBox{
+        color: white;
+    }
+    .img_box{
+        grid-column: 1 / 5;
+        z-index: -1;
+    }
+    .date_checkBox{
+        grid-row: 2/4;
+    }
+    .main_comment{
+        display: none;
+    }
+    .top_comment{
+        font-size: 200%;
+        top: 50px;
+    }
+    .textBox{
+        top: 220px;
+    }
+}
+
+
+@media screen and (max-width:768px){
+    .wrapper, .home_nav_bar,.img_box img{
+        display: block;
+        position: unset;
+    }
+    .wrapper{
+        z-index: -1;
+    }
+    .img_box{
+        width: 100%;        
+        overflow: hidden;
+        z-index: 1;
+    }
+    .img_box img{
+        height: 100%;
+        width: min-content;
+        transform: translateX(-200px);
+    }
+    .slide_textBox{
+        color: #000000;
+        display: block;
+        z-index: 2;
+    }
+    .slide_textBox *{
+        text-align: center;
+        position: unset;
+        margin: 20px 10px;
+    }
+    .top_comment{
+        font-size: 200%;
+    }
+    .main_comment{
+        display: none;
+    }
+    .date_checkBox{
+        margin-top: 50px;
+        min-width: 100%;
+        width: 100%;
+        height: 100%;
+    }
+    .date_box{
+        min-width: 150px;
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        position: unset;
+        max-width: unset;
+    }
+    .date_box button{
+        margin-bottom: 10px;
+    }
+    .date_box input{
+        width: 80%;
+    }
+    .infomenu ul, .contact_box, .sns_box {
+        width: 100%;
+    }
+    .infomenu ul{
+        margin-top: 30px;
+    }
+    .infomenu ul li{
+        display: block;
+        margin: 0 auto;
+    }
+    .footer{
+        height: 350px;
+    }
+
 }
