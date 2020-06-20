@@ -1,24 +1,73 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
+<!Doctype>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/mypage.css' %}">
+    <link rel="stylesheet" href="mypage.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+  />
+  <link rel="stylesheet" href="{% static 'mypage/css/mypage.css' %}">
     <title>mypage</title>
 </head>
 <body>
-    <div class="my_information">
-        my_information
+  <div class="main_box">
+    <div class="toggle">
+      <header class = "toggle_header">
+        <p class="toggle_logo">
+          The hotel
+        </p>
+        <div class="user_picture">
+          <i class="fas fa-user-alt fa-5x"></i>
+        </div>
+        <p class="user_name">
+          CEO MA
+        </p>
+      </header>
+      <ul class="toggle_dashboard">
+        <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="#"><i class="fas fa-user-circle"></i>My page</a></li>
+        <li><a href="#">null</a></li>
+        <li><a href="#"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+      </ul>
     </div>
-    <div class="check_reservation">
-        check_reservation
+    <div class="wrapper">
+      <div class="mypage_title">
+        <p>Personal information</p>
+      </div>
+      <div class="check_in_out">
+
+            <div class="check_in">
+              <p class="check_in_title">check in</p>
+              <p class="check_in_day">3월 1일</p>
+            </div>
+            <div class="check_out">
+              <p class="check_out_title">check out</p>
+              <p class="check_out_day">3월 4일</p>
+            </div>
+            <div class="total_day">
+              <p>총일수: 3박 4일</p>
+            </div>
+
+      </div>
+      <div class="people_number">
+          <li><p id="adult">어른</p></li>
+          <li><p id="children">어린이</p></li>
+          <li><p id="total_people">총인원</p></li>
+
+      </div>
+      <div class="modify_reservation">
+        modify_reservation
+      </div>
+      <div class="room_picture">
+        room_picture
+      </div>
+      <div class="room_information">
+          my_information
+      </div>
     </div>
-    <div class="roomNumber">
-        roomNumber
-    </div>   
-    <div class="people_number">
-        people_number
-    </div>
+  </div>
 </body>
 </html>
