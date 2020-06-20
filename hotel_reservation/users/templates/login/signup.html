@@ -5,8 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'signup/css/signup.css' %}">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+  />
 </head>
 <body>
-    
+    <div class="wrapper">
+
+      <div class="user">
+        <i class="fas fa-user-plus fa-3x"></i>
+        <h1>Sign up</h1><br>
+      </div>
+
+      <div class="username">
+        <i class="fas fa-user-tag fa-2x"></i>
+        <input id="userame" type="text" placeholder="user name">
+      </div>
+
+      <div class="email">
+        <i class="far fa-envelope fa-2x"></i>
+        <input id="email" type="email" placeholder="email">
+      </div>  
+
+      <div class="pwd">
+        <i class="fas fa-lock fa-2x"></i>
+        <input id="pwd" type="password" placeholder="password">
+      </div>
+
+      <div class="confirmpwd">
+        <i class="fas fa-lock fa-2x"></i>
+        <input id="pwd" type="password" placeholder="Confirm password"> 
+      </div>
+
+      <div class="login">
+        Already have an account, <a href="#" class="loginhere">Login here.</a>
+      </div>
+
+
+      <div class="signupbutton">
+        <a class="signup_button" href="#"><b>Sign up</b></a>
+      </div>
+
+    </div>
 </body>
 </html>

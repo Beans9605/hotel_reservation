@@ -13,7 +13,10 @@
 .home_nav_bar {
     grid-column: 1 / -1 ;
     grid-row: 1;
+    background-color: rgb(252, 231, 226);
 }
+
+/* 메뉴 바에 hover시 salmon색으로 변경하기*/
 
 .slide_textBox {
     
