@@ -38,7 +38,7 @@
         <p>Personal information</p>
       </div>
       <div class="check_in_out">
-
+  
             <div class="check_in">
               <p class="check_in_title">check in</p>
               <p class="check_in_day">3월 1일</p>
@@ -50,24 +50,35 @@
             <div class="total_day">
               <p>총일수: 3박 4일</p>
             </div>
-
+  
       </div>
       <div class="people_number">
-          <li><p id="adult">어른</p></li>
-          <li><p id="children">어린이</p></li>
-          <li><p id="total_people">총인원</p></li>
-
+          <li><p id="people_number_title">예약인원</p></li>
+          <li><p id="adult">어른: 2명</p></li>
+          <li><p id="children">어린이: 2명</p></li>
+          <li><p id="total_people">총인원: 4명</p></li>
+  
       </div>
       <div class="modify_reservation">
-        modify_reservation
+        <p>예약 수정 바로가기</p>
       </div>
       <div class="room_picture">
-        room_picture
+        <div class="pic_view_box">
+          <li><img class="pictures" src="{% static "mypage/img/room1.jpg" %}" alt=""></li>
+          <li><img class="pictures" src="{% static "mypage/img/room2.jpg" %}"    alt=""></li>
+          <li><img class="pictures" src="{% static "mypage/img/room3.jpg" %}"    alt=""></li>
+        </div>
+  
+        <i class="fas fa-chevron-circle-right fa-3x" id="next_btn"></i>
+        <i class="fas fa-chevron-circle-left fa-3x" id="prev_btn"></i>
       </div>
       <div class="room_information">
-          my_information
+          <h2 class="room_information_title">객실정보</h2>
+          <p class="kind_of_room">Suite room</p>
+          <p class="room_number">room number 201</p>
       </div>
     </div>
   </div>
-</body>
+  <script src="{% static 'mypage/js/mypage.js' %}"></script>
+  </body>
 </html>
