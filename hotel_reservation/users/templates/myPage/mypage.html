@@ -14,11 +14,10 @@
 </head>
 <body>
   <div class="main_box">
-    <div class="toggle">
+    <div class="toggle" id="toggle">
       <header class = "toggle_header">
-        <p class="toggle_logo">
-          The hotel
-        </p>
+        <p class="toggle_logo">The hotel</p>
+        <i class="fas fa-arrow-alt-circle-left fa-2x" id="toggle_cls_btn"></i>
         <div class="user_picture">
           <i class="fas fa-user-alt fa-5x"></i>
         </div>
@@ -35,7 +34,8 @@
     </div>
     <div class="wrapper">
       <div class="mypage_title">
-        <p>Personal information</p>
+        <i class="fas fa-align-justify fa-2x" id="toggle_open_btn"></i>
+        <p id="mypage_text">Personal information</p>
       </div>
       <div class="check_in_out">
   
@@ -48,7 +48,7 @@
               <p class="check_out_day">3월 4일</p>
             </div>
             <div class="total_day">
-              <p>총일수: 3박 4일</p>
+              <p>Total Day: 3박 4일</p>
             </div>
   
       </div>
@@ -60,13 +60,14 @@
   
       </div>
       <div class="modify_reservation">
-        <p>예약 수정 바로가기</p>
+        <p>예약 및 수정</p>
+        <button type="button" class="btn btn-secondary btn-lg">예약 수정 바로가기</button>
       </div>
       <div class="room_picture">
         <div class="pic_view_box">
           <li><img class="pictures" src="{% static "mypage/img/room1.jpg" %}" alt=""></li>
-          <li><img class="pictures" src="{% static "mypage/img/room2.jpg" %}"    alt=""></li>
-          <li><img class="pictures" src="{% static "mypage/img/room3.jpg" %}"    alt=""></li>
+            <li><img class="pictures" src="{% static "mypage/img/room2.jpg" %}"    alt=""></li>
+            <li><img class="pictures" src="{% static "mypage/img/room3.jpg" %}"    alt=""></li>
         </div>
   
         <i class="fas fa-chevron-circle-right fa-3x" id="next_btn"></i>
@@ -79,6 +80,6 @@
       </div>
     </div>
   </div>
-  <script src="{% static 'mypage/js/mypage.js' %}"></script>
+    <script src="{% static 'mypage/js/mypage.js' %}"></script>
   </body>
 </html>

@@ -45,3 +45,28 @@ function init(){
 }
 
 init();
+
+/*toggle move*/
+const toggle = document.getElementById('toggle');
+const toggle_cls_btn = document.getElementById('toggle_cls_btn');
+const toggle_open_btn = document.getElementById('toggle_open_btn');
+const mypage_text = document.getElementById('mypage_text');
+
+
+
+
+function closeToggle() {
+  toggle.classList.add("toggle_close");
+  toggle_open_btn.style.visibility = ('visible');
+  mypage_text.style.left = 38 + '%';
+
+}
+
+function openToggle() {
+  toggle.classList.remove("toggle_close");
+  toggle_open_btn.style.visibility = ('hidden');
+  mypage_text.style.left = 28 + '%';
+}
+
+toggle_cls_btn.addEventListener('click',closeToggle );
+toggle_open_btn.addEventListener('click',openToggle );
