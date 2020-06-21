@@ -1,1 +1,219 @@
-*{}
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+html,body {
+  border: 1px solid green;
+  width: auto;
+  height: auto;
+}
+.main_box {
+
+  width: 100%;
+  height: 100%;
+}
+.toggle {
+  border: 1px solid #D3D3D3;
+  position: relative;
+  display: block;
+  float: left;
+  height: 100%;
+  width: 250px;
+}
+.toggle_header {
+  border-bottom: 1px solid #D3D3D3;
+  position: relative;
+
+  height: 280px;
+}
+.toggle_logo {
+  color: #FFB6C1;
+  font-size: 38px;
+  white-space: nowrap;
+  margin: 0px;
+  font-family: 'Dancing Script', cursive;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.user_picture {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+position: absolute;
+top: 53%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #FFB6C1;
+}
+.user_picture i {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.user_name {
+
+  color: #FFB6C1;
+  position: absolute;
+  top: 84%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.toggle_dashboard {
+
+  padding: 0px;
+  margin: 0px;
+}
+.toggle_dashboard li {
+  position: relative;
+  list-style: none;
+  border: 1px solid #D3D3D3;
+  height: 100px;
+  margin: 0px;
+}
+.toggle_dashboard li > a {
+  color: #FFC0CB;
+  text-decoration: none;
+  font-size: 22px;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+.fas {
+  margin-right: 9px;
+}
+.wrapper {
+  border: 1px solid tomato;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 300fr 200fr 300fr;
+  grid-template-rows: 80fr 300fr 400fr;
+}
+
+.mypage_title {
+  border: 1px solid black;
+  grid-column: 1;
+  grid-row: 1;
+}
+.mypage_title p {
+  color: #FFB6C1;
+  font-size: 25px;
+  line-height: 50px;
+  margin-left: 7px;
+}
+
+.check_in_out {
+  border: 1px solid black;
+  grid-column: 1;
+  grid-row: 2;
+  position: relative;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: 6fr 2fr;
+}
+.check_in {
+  border: 1px solid black;
+  grid-column: 1 ;
+  grid-row: 1;
+  position: relative;
+}
+.check_in_title {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.check_in_day {
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.check_out {
+  border: 1px solid black;
+  grid-column: 2 ;
+  grid-row: 1;
+  position: relative;
+}
+.check_out_title {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.check_out_day {
+  font-size: 30px;
+  white-space: nowrap;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.total_day {
+  border: 1px solid black;
+  grid-column: 1 / -1 ;
+  grid-row: 2;
+}
+.total_day p {
+  font-size: 25px;
+  line-height: 20px;
+  margin-left: 8px;
+}
+
+
+.people_number {
+  border: 1px solid black;
+  grid-column: 2;
+  grid-row: 2;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: 2fr 2fr 1fr
+}
+.people_number li {
+  border: 1px solid black;
+  position: relative;
+  margin: 0px;
+  list-style: none;
+}
+
+.people_number p {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border: 1px solid black;
+  margin: 0;
+  padding-left: 10px;
+
+}
+#adult {
+  grid-row: 1;
+  font-size: 20px;
+}
+#children {
+  grid-row: 2;
+}
+#total_people {
+  grid-row: 3;
+}
+.modify_reservation {
+  border: 1px solid black;
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.room_picture {
+  border: 1px solid black;
+  grid-column: 1 / 3;
+  grid-row: 3;
+}
+
+.room_information {
+  border: 1px solid black;
+  grid-column: 3 ;
+  grid-row: 3;
+}
