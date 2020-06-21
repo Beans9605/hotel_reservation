@@ -17,7 +17,7 @@
     text-align: center;
     color: black;
     position: absolute;
-    top: 5%;
+    top: 3%;
     left: 43%;
 }
 
@@ -30,7 +30,7 @@ input[type=name] {
     font-size: large;
     padding: 10px;
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 25%;
 }
 
@@ -48,7 +48,7 @@ input[type=email] {
     font-size: large;
     padding: 10px;
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 25%;
 }
 
@@ -57,7 +57,7 @@ input[type=email]:focus {
     box-shadow: 10px 10px 5px coral;
 }
 
-input[type=password] {
+input[class=pwd1] {
     border: 2px solid rgb(224, 151, 135);
     border-radius: 5em;
     width: 300px;
@@ -66,9 +66,23 @@ input[type=password] {
     font-size: large;
     padding: 10px;
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 25%;
 }
+
+input[class=pwd2] {
+    border: 2px solid rgb(224, 151, 135);
+    border-radius: 5em;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    font-size: large;
+    padding: 10px;
+    position: absolute;
+    top: 65%;
+    left: 25%;
+}
+
 
 input[type=password]:focus {
     font-size: 120%;
@@ -82,7 +96,7 @@ input:hover {
 .login {
     text-align: center;
     position: absolute;
-    top: 75%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%,-50%);
     color: black;
@@ -111,7 +125,7 @@ input:hover {
     height: 50px;
     font-size: x-large;
     position: absolute;
-    top: 80%;
+    top: 85%;
     left: 40%;
 }
 
