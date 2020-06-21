@@ -9,3 +9,7 @@ class Reservation(models.Model) :
     
     user = models.CharField(max_length=10)
 
+
+
+
+
