@@ -3,14 +3,14 @@ background-color: #f1eeee;
 }
 
 .wrapper {
-        border: 2px solid darkgrey;
-        border-radius: 8em;
-        width: 600px;
-        height: 600px;
-        position: absolute;
-        top: 10%;
-        left: 35%;
-    
+    border: 2px solid burlywood;
+    border-radius: 5em;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    margin-left: -300px;
+    top:15%;
+    left: 50%;
 }
 
 .mainlogo {
@@ -43,13 +43,10 @@ background-color: #f1eeee;
     transform: translate(-50%,-50%);   
 }
 
-/* sign in 버튼 색깔 바꾸는 거 질문하rl*/
+/* sign in 버튼 색깔 바꾸는 거 질문하기*/
 .btn-primary {
-    color: white;
     background-color: salmon;
     border-color: salmon;
-    text-align: center;
-
 }
 
 .signupwith {
@@ -68,12 +65,3 @@ background-color: #f1eeee;
 .gosignuppage:hover {
     color: salmon;
 }
-
-
-
-
-
-
-
-
-
