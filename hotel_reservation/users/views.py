@@ -28,7 +28,7 @@ def mypage(request):
     if request.session.get['user',True] :
         user = Users.objects.filter(username = request.session['user'])
         reservations = Reservation.objects.filter(user=user)
-        context=['user':user, 'reservations':reservations]
+        context={'user':user, 'reservations':reservations}
 
 
 
