@@ -23,14 +23,27 @@ def signup(request):
             )
         
         user.save()
+        return redirect("home")
+    else :
         return render (request, "login/signup.html")
-def mypage(request):
-    if request.session.get['user', True] :
-        user = Users.objects.filter(username = request.session['user'])
-        reservations = Reservation.objects.filter(user=user)
-        context={'user':user, 'reservations':reservations}
-    return render (request, "myPage/mypage.html")
 
+
+# def mypage(request):
+#     if request.session.get['user', True] :
+#         user = Users.objects.filter(username = request.session['user'])
+#         reservations = Reservation.objects.filter(user=user)
+#         context={'user':user, 'reservations':reservations}
+#     return render (request, "myPage/mypage.html")
+
+
+def mypage(request) :
+    if request.session.get('user', False) :
+        user = get_object_or_404(Users, username = request.session['user'])
+        reservations = Reservation.objects.filter(user=user)
+        context = {'user' : user, 'reservations' :reservations}
+        return render(request, "mypage/mypage.html", context)
+    else :
+        return render(request, "mypage/mypage.html")
 
 
 # def login(request):

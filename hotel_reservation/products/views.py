@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from datetime import date, datetime, timedelta
 from .models import Product, Reservation
+from users.models import Users
 
 # Create your views here.
 
@@ -49,7 +50,7 @@ def reservation_user(request) :
 
         if enday_date == reservation_date :
             return render(request, "main/home.html", {"err" : "err_date"})
-        elif room.how_many_accepts < how_many_people :
+        elif search_empty_room.how_many_accepts < how_many_people :
             return render(request, "main/home.html", {"err" : "This is not correct"})
         else :
             reservation = Reservation (
@@ -57,7 +58,7 @@ def reservation_user(request) :
                 enday_date = enday_date,
                 how_many_users = how_many_people,
                 stay_day = stay_day,
-                product = room,
+                product = search_empty_room,
                 user = user
             )
 
@@ -65,9 +66,25 @@ def reservation_user(request) :
 
             return render(request, "")
     else :
-        return render(request, "")        
+        return render(request, "")
 
 
 def reservation_modify(request) :
     if request.method == "POST" :
+        reservation_pk = request.POST['reservation_pk']
+        reservation_date = request.POST['reservation_date']
+        enday_date = request.POST['enday_date']
+        enday_date = datetime.strptime(enday_date, "%Y-%m-%d")
+        reservation_date = datetime.strptime(reservation_date, "%Y-%m-%d")
+        current_date = datetime.now("%Y-%m-%d")
+        user = request.POST['user']
+        user = get_object_or_404(Users, username=user)
+
+        reservation = get_object_or_404(Reservation, pk=reservation_pk)
+        
+        if reservation.user == user :
+            product = reservation.product
+            return render(request, "products/mod")
+
+
         
