@@ -5,7 +5,7 @@ def logout(request):
     request.session.modified = True
     request.session['user'].delete()
 
-def sign_up(request):
+def signup(request):
     if request.method=='POST':
         username=request.POST['username']
         password=request.POST['password']
@@ -23,12 +23,13 @@ def sign_up(request):
             )
         
         user.save()
-
+        return render (request, "login/signup.html")
 def mypage(request):
     if request.session.get['user', True] :
         user = Users.objects.filter(username = request.session['user'])
         reservations = Reservation.objects.filter(user=user)
         context={'user':user, 'reservations':reservations}
+    return render (request, "myPage/mypage.html")
 
 
 
@@ -47,7 +48,7 @@ def mypage(request):
 #         return render(request, 'login.html')
 
 
-def login(request) :
+def signin(request) :
     if request.method == 'POST' :
         username = request.POST['username']
         password = request.POST['password']
@@ -63,4 +64,6 @@ def login(request) :
             return redirect('login', context)
         
     else :
-        return render(request, "", {"err" : "형식이 잘못됐습니다."})
+        return render (request, "login/signin.html")
+
+# Create your views here.
