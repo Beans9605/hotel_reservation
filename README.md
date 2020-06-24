@@ -7,12 +7,6 @@
 멘티 : 변정영, 이민호, 임선주, 유진아, 채혜민
 
 
-# 사용기술
- - Django FrameWork
- - python, javascript, html/css
-
-# 구현 범위
-
 backend
  - 변정영 : login function, reservation_delete function
  - 유진아 : mypage data sending, sign_up function, reservation_check function
@@ -21,7 +15,6 @@ backend
  - 고영빈 : data modeling 수정, reservation function, back-end development 수정 항목 작성 및 수정
  
 frontend # 작성요망
- - 이민호
- - 임선주
- 
- - 마재훈
+ - 이민호 : mypage 제작
+ - 임선주 : signIn, signUp 제변경
+ - 마재훈 : 반응형으로 구현
