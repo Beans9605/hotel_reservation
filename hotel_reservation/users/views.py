@@ -7,5 +7,6 @@ def mypage(request):
 def signup(request):
     return render (request, "login/signup.html")
     
-def signin(request):
-    return render (request, "login/signin.html")
+def signin(request): 
+    context={'A':A, "B":B}
+    return render (request, "login/signin.html", context)
