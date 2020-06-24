@@ -1,40 +1,60 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'signup/css/signup.css' %}">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
-  />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'signup/css/signup.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 </head>
+
 <body>
-    <div class="wrapper">
+  <div class="wrapper">
 
-      <div class="signuplogo">
-        <i class="fas fa-user-plus fa-3x"></i>
-        <h1>Sign up</h1><br>
-      </div>
-      
-      <input id="username" type="name" placeholder=" user name" >
+    <div class="signuplogo">
+      <i class="fas fa-user-plus fa-3x"></i>
+      <h1>Sign up</h1><br>
+    </div>
+    <div id="err_msg">
 
-      <input id="email" type="email" placeholder="email">
-        
-      <input class="pwd1" type="password" placeholder="password">
+    </div>
+    <form id="signup_form" action="{% url 'signup' %}" method="POST">
+      {% csrf_token %}
+      <input id="username" type="text" name="username" placeholder=" user name">
 
-      <input class="pwd2" type="password" placeholder="Confirm password"> 
+      <input id="email" type="number" name="number" placeholder="phone number">
+
+      <input id="username" type="text" name="birth" placeholder="brithday ex) 19960515">
+
+      <input class="pwd1" id="pwd" name="password" type="password" placeholder="password">
+
+      <input class="pwd2" id="check_pwd" type="password" placeholder="Confirm password">
 
       <div class="login">
-        Already have an account, <a href="#" class="loginhere">Login here.</a>
+        Already have an account, <a href="{% url 'signin' %}" class="loginhere">Login here.</a>
       </div>
 
       <div class="signup">
-        <a class="sign_up" href="#"><b>Sign up</b></a>
+        <button type="button" onclick="check_password()" class="sign_up"><b>Sign up</b></a>
       </div>
+    </form>
+  </div>
+  <script>
+    function check_password() {
+      var input_pwd = document.getElementById("pwd").value;
+      var check_pwd = document.getElementById("check_pwd").value;
 
-    </div>
+      if (input_pwd === check_pwd) {
+        document.getElementById('signup_form').submit();
+      }
+      else {
+        var err = documnet.getElementById("err_msg");
+        err.innerHTML = "<div class='alert alert-danger' role='alert'>A simple danger alert—check it out!</div>"
+      }
+    }
+  </script>
 </body>
+
 </html>

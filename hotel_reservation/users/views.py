@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Users
+from datetime import datetime, date
 
 def logout(request):
     request.session.modified = True
@@ -11,6 +12,8 @@ def signup(request):
         password=request.POST['password']
         number=request.POST['number']
         birth=request.POST['birth']
+
+        birth = datetime.strptime(birth, "%Y%m%d").date()
         
         if Users.objects.filter(username = username) is None :
             print("error")
@@ -19,7 +22,7 @@ def signup(request):
             username=username,
             password=password,
             number=number,
-            birth=birth,
+            birth=birth
             )
         
         user.save()
