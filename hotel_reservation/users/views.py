@@ -1,10 +1,13 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Users
+from products.models import Reservation
 from datetime import datetime, date
 
 def logout(request):
     request.session.modified = True
-    request.session['user'].delete()
+    # request.session['user'].delete 함수가 아닌 del이라는 선 입력 함수로 데이터를 지움
+    del request.session['user']
+    return redirect("home")
 
 def signup(request):
     if request.method=='POST':
@@ -15,8 +18,10 @@ def signup(request):
 
         birth = datetime.strptime(birth, "%Y%m%d").date()
         
-        if Users.objects.filter(username = username) is None :
-            print("error")
+        # distinct 함수는 중복을 제거해주는 orm api
+        if Users.objects.filter(username= username).distinct() :
+            print("같은게 존재함")
+            return render(request, "login/signup.html", {"err_msg" : "같은 아이디가 존재합니다."})
 
         user=Users(
             username=username,
@@ -26,6 +31,8 @@ def signup(request):
             )
         
         user.save()
+
+        request.session['user'] = user.username
         return redirect("home")
     else :
         return render (request, "login/signup.html")
@@ -42,7 +49,7 @@ def signup(request):
 def mypage(request) :
     if request.session.get('user', False) :
         user = get_object_or_404(Users, username = request.session['user'])
-        reservations = Reservation.objects.filter(user=user)
+        reservations = Reservation.objects.filter(user=user).order_by('reservation_date')
         context = {'user' : user, 'reservations' :reservations}
         return render(request, "mypage/mypage.html", context)
     else :
