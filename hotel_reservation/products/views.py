@@ -2,7 +2,6 @@ from django.shortcuts import render, get_object_or_404
 from datetime import date, datetime, timedelta
 from .models import Product, Reservation
 from users.models import Users
-
 # Create your views here.
 
 def reservation_home(request) :
@@ -86,5 +85,6 @@ def reservation_modify(request) :
             product = reservation.product
             return render(request, "products/mod")
 
-
+def introduction(request) :
+    return render(request, "introduction/introduction.html")
         
