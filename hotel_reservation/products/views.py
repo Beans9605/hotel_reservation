@@ -5,9 +5,7 @@ from users.models import Users
 # Create your views here.
 
 def reservation_home(request) :
-
-
-    return render(request, 'products/reservation_home.html')
+    return render(request, 'reservation/reservation_home.html')
 
 def reservation_user(request) :
     if request.method == "POST" and request.session.get('user') :
@@ -75,12 +73,12 @@ def reservation_modify(request) :
         enday_date = request.POST['enday_date']
         enday_date = datetime.strptime(enday_date, "%Y-%m-%d")
         reservation_date = datetime.strptime(reservation_date, "%Y-%m-%d")
-        current_date = datetime.now("%Y-%m-%d")
+        current_date = datetime.now(current_date, "%Y-%m-%d")
         user = request.POST['user']
         user = get_object_or_404(Users, username=user)
 
         reservation = get_object_or_404(Reservation, pk=reservation_pk)
-        
+
         if reservation.user == user :
             product = reservation.product
             return render(request, "products/mod")
@@ -90,4 +88,3 @@ def introduction(request) :
 
 def introdetail(request) :
     return render(request, "introduction/introdetail.html")
-        
