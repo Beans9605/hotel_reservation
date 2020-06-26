@@ -1,0 +1,20 @@
+body {
+    color: salmon;
+}
+body{
+    background-color: #f1eeee;
+}
+
+.home_nav_bar {
+    grid-column: 1 / -1 ;
+    grid-row: 1;
+
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: salmon;
+}
+.home_nav_bar nav {
+    background-color: rgb(252, 231, 226);
+}
+
