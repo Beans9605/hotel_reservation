@@ -1,4 +1,97 @@
-body{
-    /* 임의의 값 적어놓은 것입니다 지우고 작업해 주세용 */
+*{
+    background-color: #f1eeee;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-columns: repeat(4, 1fr) minmax(50px auto);
+    
+    grid-template-rows: 300px 300px;
+    grid-template-rows: repeat(4, 1fr) minmax(50px auto);
+
+}
+
+.photo1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.photo1info {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.photo2 {
+    grid-column:1/2;
+    grid-row: 2/3;
+}
+
+.photo2info {
+    grid-column:2/3;
+    grid-row: 2/3;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.photo3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.photo3info {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.photo4 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.photo4info {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    width: 300px;
+    margin: 0 auto;
+}
+
+table {
+    width: 250px;
+    margin: 0 auto;
+}
+
+table td {
+    color: grey;
+    text-align: center;
+}
+
+h3 {
+    color: darksalmon;
+}
+
+p {
+    color: saddlebrown;
+    text-align: center;
+}
+
+.detail {
+    text-align: center;
+    width: 90px;
+    height: 45px;
+    padding: 10px;
+    border: 1px solid burlywood;
+    color: salmon;
+    background-color: blanchedalmond;
+    margin: 0 100px;
+}
+
+.detail:focus {
+    font-size: 90%;
+    color: blanchedalmond;
     background-color: salmon;
+
 }

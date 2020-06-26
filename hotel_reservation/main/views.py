@@ -7,3 +7,5 @@ def home(request) :
 
 def reservation(request) :
     return render(request, "main/reservation.html")
+
+
