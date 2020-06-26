@@ -1,1 +1,79 @@
-reservation_home.html
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reservation.css">
+    <link rel="stylesheet" href="{% static 'reservation/css/reservation.css' %}">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="main_box">
+    <div class="toggle">
+      <div class="toggle_header">
+        <a href="#"><i class="far fa-hand-scissors fa-4x"></i></a>
+        <p>The hotel</p>
+      </div>
+      <ul class="toggle_dashboard">
+        <li><p>plan & book</p></li>
+        <li><p>Top offers</p></li>
+        <li><p>Information</p></li>
+        <li><p>Location</p></li>
+      </ul>
+    </div>
+
+    <div class="wrapper">
+        <div class="personal_info">
+          <i class="fas fa-user-circle fa-4x"></i>
+          <p>USER ID</p>
+        </div>
+          <div class="check_in_box">
+            <p class="check_in_title">Search your room</p>
+            <div class="check_in">
+              <p>Check in</p>
+              <input type="date" class="check_in_day">
+            </div>
+            <div class="check_out">
+              <p>Check out</p>
+              <input type="date" class="check_out_day">
+            </div>
+            <div class="adult">
+              <p>Adult</p>
+              <input type="number" class="adult_num">
+            </div>
+            <div class="child">
+              <p>Child</p>
+              <input type="number" class="child_num">
+            </div>
+            <div class="rooms">
+              <p>Rooms</p>
+              <input type="text" name="" value="">
+            </div>
+            <div class="save_btn">
+              <button type="button" class="btn btn-outline-secondary">Save</button>
+            </div>
+          </div>
+
+
+
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

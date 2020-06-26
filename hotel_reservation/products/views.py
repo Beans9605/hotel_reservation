@@ -6,9 +6,7 @@ from users.models import Users
 # Create your views here.
 
 def reservation_home(request) :
-
-
-    return render(request, 'products/reservation_home.html')
+    return render(request, 'reservation/reservation_home.html')
 
 def reservation_user(request) :
     if request.method == "POST" and request.session.get('user') :
@@ -81,10 +79,7 @@ def reservation_modify(request) :
         user = get_object_or_404(Users, username=user)
 
         reservation = get_object_or_404(Reservation, pk=reservation_pk)
-        
+
         if reservation.user == user :
             product = reservation.product
             return render(request, "products/mod")
-
-
-        

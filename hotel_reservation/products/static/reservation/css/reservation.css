@@ -1,4 +1,176 @@
-body{
-    /* 임의의 값 적어놓은 것입니다 지우고 작업해 주세용 */
-    background-color: salmon;
+
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url('../img/back_img.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.main_box {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+.toggle {
+
+  grid-column: 1/3;
+  grid-row: 1/-1;
+  display: block;
+  min-width: 360px;
+  max-width: 390px;
+  overflow: inherit;
+  background-color: rgba(192, 192, 192, 0.5);
+  color: white;
+}
+.toggle_header, .toggle_dashboard li {
+  border-bottom: 2px solid white;
+}
+
+.toggle_header {
+  height: 200px;
+  position: relative;
+}
+.toggle_header a{
+  position: absolute;
+  top: 47%;
+  left: 5%;
+  transform: translate(0%, -50%);
+
+}
+.toggle_header i {
+  color: white;
+}
+.toggle_header p {
+  margin: 0;
+  font-size: 60px;
+  position: absolute;
+  top: 50%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+.toggle_dashboard {
+  padding: 0;
+  margin: 0;
+}
+.toggle_dashboard li {
+list-style: none;
+height: 100px;
+text-align: left;
+position: relative;
+
+}
+.toggle_dashboard li > p {
+font-size: 30px;
+position: absolute;
+left: 0;
+top: 50%;
+transform: translate(0, -120%);
+margin-left: 10px;
+transition: margin-left 0.3s;
+}
+
+.toggle_dashboard p:hover {
+  margin-left: 40px;
+}
+
+.wrapper {
+  grid-column: 3 / -1;
+  grid-row: 1 / -1;
+  width: 100%;
+  height: 100%;
+  min-width: 787px;
+  display: grid;
+  grid-template-rows: 200px 700px;
+
+  overflow: auto;
+}
+
+.personal_info {
+
+
+  position: relative;
+  width: 100% ;
+  height: 200px;
+  color: white;
+}
+.personal_info i {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.personal_info p {
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.check_in_box {
+  position: relative;
+  overflow: inherit;
+  margin: 20px 80px;
+  background-color: rgba(192, 192, 192, 0.8);
+  color: white;
+  border-radius: 10px;
+
+}
+
+.check_in_title {
+  font-size: 40px;
+  margin-left: 20px;
+}
+.check_in input , .check_out input, .rooms input, .adult input, .child input {
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 25px;
+}
+.check_in {
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  transform: translate(-50%, -25%);
+
+}
+.check_out {
+  position: absolute;
+  top: 25%;
+  left: 75%;
+  transform: translate(-50%, -25%);
+}
+.adult {
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.child {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+.rooms {
+  position: absolute;
+  left: 25%;
+  top: 75%;
+  transform: translate(-50%, -75%);
+
+}
+.btn-outline-secondary {
+  position: absolute;
+  top: 76%;
+  left: 75%;
+  transform: translate(-50%, -75%);
+}
+.save_btn > .btn {
+  width: 200px;
+  color: white;
+  border: 2px solid white;
+
 }
