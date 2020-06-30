@@ -85,6 +85,7 @@ def reservation_modify(request) :
 
 def introduction(request) :
     return render(request, "introduction/introduction.html")
+<<<<<<< HEAD
 
 
 def introdetail(request) :
@@ -92,3 +93,6 @@ def introdetail(request) :
 
 def location(request) :
     return render(request, "location/location.html")
+=======
+        
+>>>>>>> cb8a8dbc160bd359c181c6a6e797b816b51405bb
