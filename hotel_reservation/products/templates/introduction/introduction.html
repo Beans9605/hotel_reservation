@@ -28,16 +28,16 @@
 
     <div class="home_nav_bar">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">Hotel</a>
+            <a class="navbar-brand" href="{% url 'home'%}">Hotel</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="#">Home</a>
+                    <a class="nav-item nav-link" href="{% url 'home'%}">Home</a>
                     <a class="nav-item nav-link" href="{% url 'introduction'%}">Rooms</a>
-                    <a class="nav-item nav-link" href="#">Location</a>
+                    <a class="nav-item nav-link" href="{% url 'location' %}">Location</a>
                     <a class="nav-item nav-link" href="{% url 'signup'%}">Signup</a>
                     <a class="nav-item nav-link" href="{% url 'signin'%}">Signin</a>
                     <a class="nav-item nav-link" href="{% url 'mypage' %}">MyPage</a>
@@ -102,7 +102,7 @@
                     </tr>
                 </table>
                 <br>
-                <input type="button" class="detail" value="상세 보기">
+                <a href="{% url 'introdetail' %}"><input type="button" class="detail" value="상세 보기"></a>
             </div>
         </div>
         <div class="roominfo">
@@ -130,7 +130,7 @@
                     </tr>
                 </table>
                 <br>
-                <input type="button" class="detail" value="상세 보기">
+                <a href="{% url 'introdetail' %}"><input type="button" class="detail" value="상세 보기"></a>
             </div>
         </div>
         <div class="roominfo">
@@ -158,7 +158,7 @@
                     </tr>
                 </table>
                 <br>
-                <input type="button" class="detail" value="상세 보기">
+                <a href="{% url 'introdetail' %}"><input type="button" class="detail" value="상세 보기"></a>
             </div>
         </div>
 

@@ -1,0 +1,89 @@
+body{
+    background-color: #f1eeee;
+}
+
+b, h3 {
+    color: sienna;
+}
+
+strong{
+    color: darksalmon;
+}
+
+b {
+    font-size: medium;
+}
+
+.wrapper {
+    font-family: 'Noto Serif KR', serif;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: salmon;
+}
+
+.home_nav_bar nav {
+    background-color: rgb(252, 231, 226);
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+}
+
+.toptitle {
+    font-size: x-large;
+    margin: 10px auto;
+    padding: 10px;  
+}
+
+.imgbox {
+    width: 1100px;
+    height: 500px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.imgbox img {
+    width: 1100px;
+    height: 500px;
+    
+}
+
+.address {
+    margin: 10px auto;
+    padding: 20px;  
+}
+
+.traffic {
+    margin: 10px auto;
+    padding: 20px;  
+}
+
+ul li {
+    padding: 5px;
+}
+#car, #bus, #subway, #airplane {
+    list-style-type: none;
+}
+#car li:hover {
+    color: sienna;
+    background-color: blanchedalmond;
+}
+
+#bus li:hover {
+    color: sienna;
+    background-color: blanchedalmond;
+}
+
+#subway li:hover {
+    color: sienna;
+    background-color: blanchedalmond;
+}
+
+#airplane li:hover {
+    color: sienna;
+    background-color: blanchedalmond;
+}
