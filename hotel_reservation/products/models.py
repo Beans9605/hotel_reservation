@@ -1,5 +1,6 @@
 from django.db import models
 from users.models import Users
+from django.utils import timezone
 
 # Create your models here.
 
@@ -21,13 +22,13 @@ class Reservation(models.Model) :
 
 
     # 예약 선정한 날
-    reservation_date = models.DateField(auto_now=True)
+    reservation_date = models.DateField(default=timezone.now)
     # 예약 신청한 날 저장 = create_at
     request_date = models.DateField(auto_now_add=True)
 
 
     # 마지막으로 머무는 날
-    enday_date = models.DateField(auto_now=True)
+    enday_date = models.DateField(default=timezone.now)
 
     # 몇일 지내는지
     stay_day = models.IntegerField(default=1)

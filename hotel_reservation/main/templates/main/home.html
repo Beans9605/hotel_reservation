@@ -13,7 +13,6 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
         <title>Hotel_reservation</title>
         <link rel="stylesheet" href="{% static 'css/home.css' %}">
         <script src="{% static 'js/home.js' %}"></script>
@@ -31,9 +30,13 @@
                         <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
                         <a class="nav-item nav-link" href="#">Rooms</a>
                         <a class="nav-item nav-link" href="#">Location</a>
+                        {% if request.session.user %}
+                        <a class="nav-item nav-link" href="{% url 'mypage' %}">MyPage</a>
+                        <a class="nav-item nav-link" href="{% url 'logout' %}">logout</a>
+                        {% else %}
                         <a class="nav-item nav-link" href="{% url 'signup'%}">Signup</a>
                         <a class="nav-item nav-link" href="{% url 'signin'%}">Signin</a>
-                        <a class="nav-item nav-link" href="{% url 'mypage' %}">MyPage</a>
+                        {% endif %}
                     </div>
                     </div>
                 </nav>

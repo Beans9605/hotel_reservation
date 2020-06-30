@@ -13,18 +13,7 @@
 .home_nav_bar {
     grid-column: 1 / -1 ;
     grid-row: 1;
-<<<<<<< HEAD
-
-}
-.home_nav_bar nav {
     background-color: rgb(252, 231, 226);
-}
-
-.navbar-light .navbar-nav .nav-link:hover{
-    color: salmon;
-=======
-    background-color: rgb(252, 231, 226);
->>>>>>> 3a015167524d274b2ced7a3fa7c5b115d92574f5
 }
 
 /* 메뉴 바에 hover시 salmon색으로 변경하기*/
