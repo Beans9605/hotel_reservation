@@ -1,0 +1,134 @@
+*{
+    background-color: #f1eeee;
+}
+
+.wrapper {
+    border: 2px solid burlywood;
+    border-radius: 5em;
+    width: 600px;
+    height: 800px;
+    position: absolute;
+    margin-left: -300px;
+    top:5%;
+    left: 50%;
+}
+
+.signuplogo {
+    text-align: center;
+    color: black;
+    position: absolute;
+    top: 3%;
+    left: 43%;
+}
+
+input[type=name] {
+    border: 2px solid rgb(224, 151, 135);
+    border-radius: 5em;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    font-size: large;
+    padding: 10px;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+}
+
+input[type=name]:focus {
+    font-size: 120%;
+    box-shadow: 10px 10px 5px coral;
+}
+
+input[type=email] {
+    border: 2px solid rgb(224, 151, 135);
+    border-radius: 5em;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    font-size: large;
+    padding: 10px;
+    position: absolute;
+    top: 35%;
+    left: 25%;
+}
+
+input[type=email]:focus {
+    font-size: 120%;
+    box-shadow: 10px 10px 5px coral;
+}
+
+input[class=pwd1] {
+    border: 2px solid rgb(224, 151, 135);
+    border-radius: 5em;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    font-size: large;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+
+input[class=pwd2] {
+    border: 2px solid rgb(224, 151, 135);
+    border-radius: 5em;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    font-size: large;
+    padding: 10px;
+    position: absolute;
+    top: 65%;
+    left: 25%;
+}
+
+
+input[type=password]:focus {
+    font-size: 120%;
+    box-shadow: 10px 10px 5px coral;
+}
+
+input:hover {
+    background-color: blanchedalmond;
+}
+
+.login {
+    text-align: center;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: black;
+}
+
+.loginhere {
+    color: coral;
+    text-decoration: none;
+}
+
+.loginhere:hover {
+    color: tomato;
+}
+
+.sign_up {
+    text-align: center;
+    position: absolute;
+    border: 2px solid rgb(224, 151, 135);
+    border-radius: 2em;
+    width: 100px;
+    height: 50px;
+    text-decoration: none;
+    color: coral;
+    padding: 15px;
+    width: 100px;
+    height: 50px;
+    font-size: x-large;
+    position: absolute;
+    top: 85%;
+    left: 40%;
+}
+
+.sign_up:hover {
+    color: tomato;
+}
