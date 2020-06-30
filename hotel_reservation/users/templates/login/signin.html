@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'signin/css/signin.css' %}">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+  />
+</head>
+<body>
+  <div class="wrapper">
+
+    <a href="#" class="mainlogo"><i class="far fa-hand-scissors fa-4x"></i></a>
+  
+    <div class="welcome">
+      <h1>Welcome!</h1>
+      <h3>Sign in to your account</h3>
+    </div>
+
+    <input id="id" type="text" placeholder="Enter your email">
+
+    <input id="pwd" type="password" placeholder="password">
+
+    <a href="#" class="signup"><b>Sign up with &nbsp;</b><i class="far fa-hand-scissors fa-1x"></i></a>
+
+  </div> 
+</body>
+</html>

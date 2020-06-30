@@ -1,0 +1,145 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'location/css/location.css' %}">
+    
+    <!-- fontawesome -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <title>Document</title>
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&family=Sunflower:wght@300&display=swap" rel="stylesheet">  
+  </head>
+  <body>
+    <div class="home_nav_bar">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="{% url 'home'%}">Hotel</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="{% url 'home'%}">Home</a>
+                    <a class="nav-item nav-link" href="{% url 'introduction'%}">Rooms</a>
+                    <a class="nav-item nav-link" href="#">Location</a>
+                    <a class="nav-item nav-link" href="{% url 'signup'%}">Signup</a>
+                    <a class="nav-item nav-link" href="{% url 'signin'%}">Signin</a>
+                    <a class="nav-item nav-link" href="{% url 'mypage' %}">MyPage</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="wrapper">
+        <div class="toptitle">
+            <b>ㅇㅇ HOTEL BUSAN MAP</b>
+            <p><em>ㅇㅇ호텔 부산에<br>
+            오신걸 환영합니다.</em></p>
+        </div>
+        <div class="imgbox">
+            <img src="{% static 'location/img/map.png'%}">
+        </div>
+        <div class="address">
+            <br><h3>언제나 설레는 곳 부산 ㅇㅇ호텔이 있습니다.</h3><br>
+            <strong>부산광역시 해운대구 해운대 해변로 296 (중동)</strong><hr>
+        </div>
+        <div class="traffic">
+            <br><h3>Traffic</h3><br>
+            <b>최고의 위치를 자랑하는 ㅇㅇ호텔입니다.</b><br>
+            <ul id="car">
+                <br><strong>Car</strong><br><br>
+                <li><b>경부고속도로구서 I.C 요금경부고속도로(서울, 경기, 강원, 중부, 경북권역) -> 호텔</b><br><br>
+                    경부고속도로구서 I.C 요금소 → 번영로(도시고속도로 – 원도 I.C – 해운대 BEXCO 방향 EXIT) → 충렬로(해운대방향) → <br>
+                    올림픽 교차로(해운대방향 직진) → 숭당삼거리(직진) → APEC로 (동백섬 방향 EXIT) → 동백사거리(좌회전) → 해운대 해수욕장 → 호텔 </li>
+            </ul>
+            <ul id="bus">
+                <br><strong>Bus</strong><br><br>
+                <li>
+                    <b>부산역 -> 호텔</b><br><br>
+                    *급행 1003번(부산역) → ‘해운대 온천 사거리’ 하차 (약 45분 소요) → 해운대 해수욕장 입구 방면 도보 6분 → 호텔<br>
+                    *급행 1001번(부산역) → ‘해운대역’하차(약 52분 소요) → 해운대 해수욕장 입구 방면 도보 14분 → 호텔
+                </li>
+                <br>
+                <li>
+                    <b>노포동 종합버스터미널 -> 호텔</b><br><br>
+                    *급행 1002번(노포동 부산 종합버스터미널) → 센텀센시빌(환승)_100번/115-1번/200번 → 해운대온천 사거리 하차<br> 
+                    &nbsp;&nbsp;→ 해운대 해수욕장 입구 방면 도보 6분 → 호텔<br>
+                    *급행 1002번(노포동 부산 종합버스터미널) → 센텀센시티역(환승)_39번/141번 → 해운대온천 사거리 하차 → 해운대 해수욕장 입구 방면 도보 6분 → 호텔
+                </li>
+                <br>
+                <li>
+                    <b>사상 서부시외버스터미널 -> 호텔</b><br><br>
+                    31번(서부 시외버스터미널) → 해운대 하차 → 해운대 해수욕장 입구 방면 도보 6분 → 호텔 
+                </li>
+                <br>
+                <li>
+                    <b>김해공항 -> 호텔</b><br><br>
+                    일반 307번(김해공항) → 해운대 해수욕장 입구 하차 → 호텔 
+                </li>
+            </ul>
+            <ul id="subway">
+                <br><strong>Subway</strong><br><br>
+                <li>
+                    <b>부산역 -> 호텔</b><br><br>
+                    1호선 부산역 → 2호선 서면역(환승) → 2호선 해운대역 3번/5번 출구 → 해운대 해수욕장 방면 도보 10분 
+                </li>
+                <br>
+                <li>
+                    <b>노포동 종합버스터미널 -> 호텔</b><br><br>
+                    *1호선 노포역 → 2호선 서면역(환승) → 2호선 해운대역 3번/5번 출구 → 해운대 해수욕장 방면 도보 10분<br>
+                    *1호선 노포역 → 3호선 연산역(환승) → 2호선 수영역(환승) → 2호선 해운대역 3번/5번 출구 
+                    → 해운대 해수욕장 방면 도보 10분
+                </li>
+                <br>
+                <li>
+                    <b>사상 서부시외버스터미널 -> 호텔</b><br><br>
+                    2호선 사상역 → 2호선 해운대역 3번/5번 출구 → 해운대 해수욕장 방면 도보 10분 
+                </li>
+
+                </ul>
+            <ul id="airplane">
+                <br><strong>Airplane</strong><br><br>
+                <li>    
+                    <b>부산역 -> 호텔</b><br><br>
+                    1호선 부산역 → 2호선 서면역(환승) → 2호선 해운대역 3번/5번 출구 → 해운대 해수욕장 방면 도보 10분 
+                </li>
+                <br>
+                <li>
+                    <b>김해공항 -> 호텔</b><br><br>
+                    <b>[ 리무진 버스 1 ]</b><br>
+                    김해공항 국내선 → 대남교차로 → SK네트웍스 → 수영교차로 → 센텀시티역 → 벡스코 → 요트장 → 한화리조트 → 현대 하이온페리온삼거리 → 웨스틴조선부산 → <br>
+                    해운대그랜드호텔 → 노보텔엠버서더 → 파라다이스호텔부산 → 팔레드시즈 리조트 → 장산역 → 해운대백병원 → 동부아파트 → 대림아파트 → <br>
+                    동부아파트 맞은편 → 홈플러스 → 센텀시티역 → 수영교차로 → 금련산청소년수련원 → 대남교차로 → 국제선청사<br>
+                    *첫차 07:15막차 21:40배차간격 30분
+                    <br>
+                    <br>
+                    <b>[ 리무진 버스 2 ]</b><br>
+                    국제선청사 → 국내선 → 대연비치아파트 → 해운대센텀호텔 → 벡스코 → 양운고등학교 → 대동상가 → 동부아파트 → 부흥고.해운대백병원 → 장산역 →<br> 
+                    노보텔엠버서더 → 파라다이스호텔부산 → 씨클라우드호텔 → 그랜드호텔 → 웨스턴조선호텔 →베네시티아파트 → 한화리조트 → 트럼프월드마린(현대아이파크) → <br>
+                    경남아파트 → 홈플러스 → 센텀시티역 → 남천해변시장 → 국제선청사 → 국내선 <br>
+                    *첫차 06:45막차 21:45배차간격 25분
+                    <br>
+                    <br>
+                    <b>[ 택시 ]</b><br>
+                    일반 30,000원, 모범 45,000원 내외 (40여분 소요)<br> 
+                </li>
+                
+            </ul>
+        </div>
+        <br><br><br>
+    </div>
+</body>
+
+</html>    

@@ -1,0 +1,355 @@
+* {
+    margin: 0px;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30fr 537fr 400fr 500fr 30fr;
+    grid-template-rows: 56px 100px 470px 435px 400px;
+}
+
+.home_nav_bar {
+    grid-column: 1 / -1 ;
+    grid-row: 1;
+
+}
+.home_nav_bar nav {
+    background-color: rgb(252, 231, 226);
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: salmon;
+}
+
+.slide_textBox {
+    
+    grid-column: 2 / 3 ;
+    grid-row: 2 / 4;
+    position: relative;
+    overflow: visible;
+}
+.slide{
+    height: 100%;
+}
+
+.top_comment {
+    font-size: 300%;
+    position: absolute;
+    left: 60px;
+    top: 120px;
+}
+.main_comment {
+    display: none;
+    position: absolute;
+    max-height: 100px;
+    left: 60px;
+    top: 200px;
+    font-size: 500%;
+    z-index: 1;
+    white-space: nowrap;
+}
+.textBox {
+    
+    position: absolute;
+    left: 60px;
+    top: 369px;
+    font-size: 80%;
+}
+.img_box {
+    grid-column: 3 / 5 ;
+    grid-row: 2 / 4;
+    position: relative; 
+}
+
+.img_box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item{
+    height: 100%;
+}
+
+
+.date_checkBox {
+    min-width: 470px;
+    grid-column: 4  ;
+    grid-row: 3 / 4;
+    background-color: white;
+    z-index: 1;
+    position: relative;
+}
+
+.date_box {
+    position: absolute;
+    max-width: 152px;
+    min-width: 152px;
+    max-height: 80px;
+    min-height: 80px;
+    text-align: left;
+ 
+}
+.date_box p {
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+.date_box input {
+    border: none;
+    border-bottom: 3px solid black;
+    width: 158px;
+    margin: 0px;
+}
+
+#checkin {
+    grid-column: 2 ;
+    grid-row: 2 ;
+    top: 20%;
+    left: 10%;
+}
+
+#checkout {
+    grid-column: 3;
+    grid-row: 2;
+    top: 20%;
+    right: 46px;
+}
+
+#room {
+    grid-column: 2;
+    grid-row: 3; 
+    top: 40%;
+    left: 10%;
+    
+}
+#location {
+    grid-column: 3;
+    grid-row: 3; 
+    top: 40%;
+    right: 46px;;
+}
+#adult {
+    grid-column: 2;
+    grid-row: 4; 
+    top: 60%;
+    left: 10%;
+}
+#children {
+    grid-column: 3;
+    grid-row: 4;
+    top: 60%;
+    right: 46px;
+}
+#bookNow {
+   width: 152px;
+   height: 50px;
+   top: 85%;
+   left: 10%;
+}
+.btn-sm {
+    margin-left: 1px;
+    
+}
+.imformation {
+   
+    grid-column: 2 / 5 ;
+    grid-row: 4;
+}
+
+.infomenu {
+    background: rgb(252, 231, 226);
+}
+
+.infomenu ul {
+    margin: 0 auto;
+    padding: 10;
+    width: 900px;
+    text-align: center;
+}
+
+.infomenu ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 50px;
+    margin: 10px 50px;
+}
+
+.infomenu ul li:hover {
+    color: salmon;
+}
+.carousel-inner{
+    height: 100%;
+}
+
+.footer {
+    grid-column: 1 / -1 ;
+    grid-row: 5;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+
+.footer_logo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+}
+
+.contact_box {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    
+    width: 800px;
+    height: 80px;
+    top: 59%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+}
+
+.contact_box2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.sns_box {
+    position: relative;
+    
+    width: 400px;
+    height: 50px;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+
+.facebook {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    transform: translate(-50%,-50%);
+}
+.twitter {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.instagram {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 62%;
+    transform: translate(-50%,-50%);
+}
+
+
+@media screen and (max-width: 1024px){
+    .infomenu ul{
+        width: 100%;
+    }
+    .slide_textBox{
+        color: white;
+    }
+    .img_box{
+        grid-column: 1 / 5;
+        z-index: -1;
+    }
+    .date_checkBox{
+        grid-row: 2/4;
+    }
+    .main_comment{
+        display: none;
+    }
+    .top_comment{
+        font-size: 200%;
+        top: 50px;
+    }
+    .textBox{
+        top: 220px;
+    }
+}
+
+
+@media screen and (max-width:768px){
+    .wrapper, .home_nav_bar,.img_box img{
+        display: block;
+        position: unset;
+    }
+    .wrapper{
+        z-index: -1;
+    }
+    .img_box{
+        width: 100%;        
+        overflow: hidden;
+        z-index: 1;
+    }
+    .img_box img{
+        height: 100%;
+        /* transform: translateX(-200px); */
+    }
+    .slide_textBox{
+        color: #000000;
+        display: block;
+        z-index: 2;
+    }
+    .slide_textBox *{
+        text-align: center;
+        position: unset;
+        margin: 20px 10px;
+    }
+    .top_comment{
+        font-size: 200%;
+    }
+    .main_comment{
+        display: none;
+    }
+    .date_checkBox{
+        margin-top: 50px;
+        min-width: 100%;
+        width: 100%;
+        height: 500px;
+    }
+   
+    .date_box{
+        min-width: 150px;
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        position: unset;
+        max-width: unset;
+    }
+    .date_box button{
+        margin-bottom: 10px;
+    }
+    .date_box input{
+        width: 80%;
+    }
+    .infomenu ul, .contact_box, .sns_box {
+        width: 100%;
+    }
+    .infomenu ul{
+        margin-top: 30px;
+    }
+    .infomenu ul li{
+        display: block;
+        margin: 0 auto;
+    }
+    .footer{
+        height: 350px;
+    }
+}
