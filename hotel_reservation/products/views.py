@@ -158,7 +158,7 @@ def reservation_delete(request,pk) :
         pk.delete()
         return render(request,"products/main/html")
     else:
-        err = "정보가 일치하지 않습니다"
+        err = "정보가 일치하지 않습니다123"
         context ={"err":err}
         return render(request,"products/main/html", context) 
 
