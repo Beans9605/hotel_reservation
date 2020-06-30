@@ -124,6 +124,7 @@ def reservation (request) :
         return render(request, "reservation/reservation.html")
 
 
+<<<<<<< HEAD
 
 # Create your views here.
 
@@ -162,3 +163,44 @@ def reservation_delete(request,pk) :
         context ={"err":err}
         return render(request,"products/main/html", context) 
 
+=======
+def reservation_modify(request, pk) :
+    user = get_object_or_404(Users, username = request.session['user'])
+
+    reservation_list = Reservation.objects.filter(user = user)
+    reservation = reservation_list.objects.get(pk = pk)
+
+    if request.method == "POST" and request.session.get('user') is not None:
+        
+        start_day = request.POST['start_day']
+        end_day = request.POST['end_day']
+        people = int(request.POST['adult']) + int(request.POST['child'])
+
+        start_day = datetime.strptime(start_day, "%Y-%m-%d")
+        end_day = datetime.strptime(end_day, "%Y-%m-%d")
+
+        night_num = int((end_day-start_day).days) - 1
+        
+    
+        reservation_class = ReservationBaseAlgorithm(start_day, end_day, night_num, people)
+        empty_room_find = reservation_class.reservation_find_empty_room()
+
+        
+        if empty_room_find == None :
+            context = {"err" : "이미 모든 객실이 사용중입니다. 다른 날짜를 선택해주세요"}
+            return render(request, "reservation/reservation.html", context)
+        elif empty_room_find == reservation.product:
+            context = {"err" : "이미 선택된 객실입니다. 다른 날짜를 선택해주세요"}
+            return render(request, "reservation/reservation.html", context)
+        else :
+            reservation_class.modify_reservation(empty_room_find, reservation)
+        
+        return redirect("home")
+
+    elif request.session.get('user') is None  :
+        return redirect('home')
+    else :
+        return render(request, "reservation/reservation.html")
+
+        
+>>>>>>> c198760310ee4c40cf7d2922cd4ab5b6cb9c9158
