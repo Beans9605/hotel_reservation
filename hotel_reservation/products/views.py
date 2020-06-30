@@ -82,10 +82,7 @@ def reservation_modify(request) :
         if reservation.user == user :
             product = reservation.product
             return render(request, "products/mod")
-<<<<<<< HEAD
-=======
 
 def introduction(request) :
     return render(request, "introduction/introduction.html")
         
->>>>>>> 2e8bbe03f70db2b018c9580fa4261bab4437d28b
