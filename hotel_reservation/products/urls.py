@@ -5,6 +5,4 @@ urlpatterns = [
     path('introdetail/', views.introdetail, name="introdetail"),
     path('reservation/', views.reservation_home, name="reservation"),
     path('location/', views.location, name="location"),
-    path('location/', views.location, name="location1"),
-       
 ]

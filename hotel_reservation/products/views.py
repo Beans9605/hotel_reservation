@@ -86,7 +86,6 @@ def reservation_modify(request) :
 def introduction(request) :
     return render(request, "introduction/introduction.html")
 
-
 def introdetail(request) :
     return render(request, "introduction/introdetail.html")
 
