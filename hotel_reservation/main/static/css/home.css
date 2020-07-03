@@ -10,18 +10,23 @@
     grid-template-columns: 30fr 537fr 400fr 500fr 30fr;
     grid-template-rows: 56px 100px 470px 435px 400px;
 }
+
 .home_nav_bar {
     grid-column: 1 / -1 ;
     grid-row: 1;
+<<<<<<< HEAD
+    background-color: rgb(252, 231, 226);
+=======
+
+}
+.home_nav_bar nav {
     background-color: rgb(252, 231, 226);
 }
 
-/* 메뉴 바에 hover시 salmon색으로 변경하기*/
-
-.navbar-light .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:hover{
     color: salmon;
+>>>>>>> f3226251b12e88b90622f6c347c11eaf4fe70fbd
 }
-
 
 .slide_textBox {
     
@@ -30,13 +35,15 @@
     position: relative;
     overflow: visible;
 }
+.slide{
+    height: 100%;
+}
 
 .top_comment {
     font-size: 300%;
     position: absolute;
     left: 60px;
     top: 120px;
-
 }
 .main_comment {
     display: none;
@@ -179,6 +186,9 @@
 .infomenu ul li:hover {
     color: salmon;
 }
+.carousel-inner{
+    height: 100%;
+}
 
 .footer {
     grid-column: 1 / -1 ;
@@ -318,6 +328,7 @@
         width: 100%;
         height: 500px;
     }
+   
     .date_box{
         min-width: 150px;
         margin: 0 auto;

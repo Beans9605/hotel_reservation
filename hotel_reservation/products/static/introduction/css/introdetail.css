@@ -1,0 +1,103 @@
+body{
+    background-color: #f1eeee;
+}
+
+.wrapper {
+    font-family: 'Noto Serif KR', serif;
+}
+
+h3, b {
+    color: sienna;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: salmon;
+}
+
+.home_nav_bar nav {
+    background-color: rgb(252, 231, 226);
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+}
+
+.toptitle {
+    font-size: x-large;
+    margin: 10px auto;
+    padding: 10px;    
+}
+
+.imgbox {
+    max-width: 1100px;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.imgbox img {
+    width: 1100px;
+    height: 500px;
+}
+
+.imgbox img:hover {
+    cursor: pointer;
+    transform:scale(1.1);
+    transition: transform .35s;
+}
+    
+.infotitle {
+    margin: 10px auto;
+    padding: 20px;
+}
+
+.infodetail {
+    display: inline-flex;
+    padding: 20px;    
+}
+
+#li, #checkinout, #basicinfo, #notice {
+    width: 300px;
+    height: 300px;
+}
+
+#checkinout {
+    list-style-type: none;
+}
+
+ul li:hover {
+    background-color: blanchedalmond;
+    color: sienna;
+}
+
+.notice {
+    padding: 20px;
+    border: 1px solid black;
+    width: 900px;
+    height: 350px;
+}
+
+#notice li {
+    width: 800px;
+    padding: 5px;
+}
+
+.reservation {
+    padding: 20px;
+}
+
+#reservation {
+    width: 150px;
+    height: 50px;
+    padding: 20px;
+    font-size: larger;
+    color: sienna;
+    text-decoration: none;
+    border: 1px solid sienna;
+}
+
+#reservation:hover {
+    background-color: blanchedalmond;
+}
