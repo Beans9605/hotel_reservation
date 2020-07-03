@@ -26,20 +26,6 @@
                     <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-<<<<<<< HEAD
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="#">Rooms</a>
-                        <a class="nav-item nav-link" href="#">Location</a>
-                        {% if request.session.user %}
-                        <a class="nav-item nav-link" href="{% url 'mypage' %}">MyPage</a>
-                        <a class="nav-item nav-link" href="{% url 'logout' %}">logout</a>
-                        {% else %}
-                        <a class="nav-item nav-link" href="{% url 'signup'%}">Signup</a>
-                        <a class="nav-item nav-link" href="{% url 'signin'%}">Signin</a>
-                        {% endif %}
-                    </div>
-=======
                         <div class="navbar-nav">
                             <a class="nav-item nav-link active" href="{% url 'home'%}">Home</a>                       
                             <a class="nav-item nav-link" href="{% url 'reservation' %}">reservation</a>
@@ -49,7 +35,6 @@
                             <a class="nav-item nav-link" href="{% url 'signin'%}">Signin</a>
                             <a class="nav-item nav-link" href="{% url 'mypage' %}">MyPage</a>
                         </div>
->>>>>>> f3226251b12e88b90622f6c347c11eaf4fe70fbd
                     </div>
                 </nav>
             </div>
