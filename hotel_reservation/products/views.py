@@ -124,46 +124,6 @@ def reservation (request) :
         return render(request, "reservation/reservation.html")
 
 
-<<<<<<< HEAD
-
-# Create your views here.
-
-def reservation_home(request) :
-
-
-    return render(request, 'products/reservation_home.html')
-
-
-def reservation_modify(request) :
-    if request.method == "POST" :
-        reservation_pk = request.POST['reservation_pk']
-        reservation_date = request.POST['reservation_date']
-        enday_date = request.POST['enday_date']
-        enday_date = datetime.strptime(enday_date, "%Y-%m-%d")
-        reservation_date = datetime.strptime(reservation_date, "%Y-%m-%d")
-        current_date = datetime.now("%Y-%m-%d")
-        user = request.POST['user']
-        user = get_object_or_404(Users, username=user)
-
-        reservation = get_object_or_404(Reservation, pk=reservation_pk)
-        
-        if reservation.user == user :
-            product = reservation.product
-            return render(request, "products/mod")
-
-
-def reservation_delete(request,pk) :    
-    pk = Reservation.objects.get(pk=pk)
-    user = request.POST["user"]
-    if pk.user == user:
-        pk.delete()
-        return render(request,"products/main/html")
-    else:
-        err = "정보가 일치하지 않습니다123"
-        context ={"err":err}
-        return render(request,"products/main/html", context) 
-
-=======
 def reservation_modify(request, pk) :
     user = get_object_or_404(Users, username = request.session['user'])
 
@@ -203,4 +163,24 @@ def reservation_modify(request, pk) :
         return render(request, "reservation/reservation.html")
 
         
->>>>>>> c198760310ee4c40cf7d2922cd4ab5b6cb9c9158
+def reservation_delete(request, pk) :
+    if request.session.get('user') is not None :
+        user = get_object_or_404(Users, username=request.session['user'])
+        reservs = Reservation.objects.filter(user = user)
+        reserv = get_object_or_404(Reservation, pk=pk)
+        if reserv in reservs :
+            reserv.delete()
+            request.session['reservation_delete'] = "삭제 성공"
+            return redirect('home')
+        else :
+            request.session['reservation_delete_err'] = "reservation delete error!"
+            return redirect('home')
+
+def reservation_check(request) :
+    if request.session.get('user') is not None :
+        user = get_object_or_404(Users, username=request.session['user'])
+        reservs = Reservation.objects.filter(user=user)
+        
+        context = {'reservations' : reservs}
+
+        return render(request, "")
