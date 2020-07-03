@@ -1,11 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Users
 from products.models import Reservation
-<<<<<<< HEAD
 from datetime import datetime, date
-=======
-from datetime import datetime
->>>>>>> c198760310ee4c40cf7d2922cd4ab5b6cb9c9158
 
 def logout(request):
     request.session.modified = True
@@ -93,4 +89,3 @@ def signin(request) :
     else :
         return render (request, "login/signin.html")
 
-# Create your views here.
