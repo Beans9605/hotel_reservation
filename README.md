@@ -14,7 +14,7 @@ backend
       => + data modeling 전원 참여
  - 고영빈 : data modeling 수정, reservation function, back-end development 수정 항목 작성 및 수정
  
-frontend # 작성요망
- - 이민호 : mypage 제작
- - 임선주 : signIn, signUp 제변경
+frontend 
+ - 이민호 : home, mypage 제작
+ - 임선주 : signIn, signUp, rooms 제작
  - 마재훈 : 반응형으로 구현
